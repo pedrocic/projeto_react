@@ -1,17 +1,12 @@
-import './Nav.scss';
 import React from 'react';
+import Navlink from '../../shared/nav-link/NavLink';
+import './Nav.scss';
 
 export default () => (
   <aside className="menu-area">
     <nav className="menu">
-      <a href="#/">
-        <i className="fa fa-home" />
-        Início
-      </a>
-      <a href="#/users">
-        <i className="fa fa-users" />
-        Usuários
-      </a>
+      <Navlink href="#" icon="fa fa-home" title="Home" />
+      <Navlink href="#/users" icon="fa fa-users" title="Usuários" />
     </nav>
   </aside>
 );
