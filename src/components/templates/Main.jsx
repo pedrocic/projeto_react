@@ -2,9 +2,9 @@ import './Main.scss';
 import React from 'react';
 import Header from './header/Header';
 
-export default () => (
+export default (props) => (
   <>
-    <Header />
+    <Header {...props} />
     <main className="content">
       Conteudo
     </main>
