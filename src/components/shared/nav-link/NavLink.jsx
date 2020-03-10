@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function navLink({ href, icon, title }) {
   navLink.propTypes = {
@@ -11,10 +12,10 @@ export default function navLink({ href, icon, title }) {
     href: '#',
   };
   return (
-    <a href={href}>
+    <Link to={href}>
       <i className={icon} />
       {' '}
       {title}
-    </a>
+    </Link>
   );
 }

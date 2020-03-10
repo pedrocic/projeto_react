@@ -1,23 +1,24 @@
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import './App.scss';
 
+import Routes from './Routes';
 
 import Logo from '../components/templates/logo/Logo';
 import Nav from '../components/templates/nav/Nav';
-import Main from '../components/templates/Main';
 import Footer from '../components/templates/footer/Footer';
 
-export default () => (
-  <div className="app">
-    <Logo />
-    <Nav />
-    <Main
-      icon="home"
-      title="Início"
-      subtitle="Segundo Projeto do capítulo de Reactj."
-    />
-    <Footer />
-  </div>
-);
+export default function app() {
+  return (
+    <HashRouter>
+      <div className="app">
+        <Logo />
+        <Nav />
+        <Routes />
+        <Footer />
+      </div>
+    </HashRouter>
+  );
+}
